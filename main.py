@@ -14,7 +14,7 @@ else:
 
 if not os.path.exists(feature_file_name):
     raise FileNotFoundError(
-        f"File {feature_file_name} does not exist. \n✔ Please run feature_extration.py first")
+        f"File {feature_file_name} does not exist. \n✔ Please run FeatureBuilder.py first")
 else:
     print("Found feature file: ", feature_file_name)
 # end file checking

@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 
 
@@ -35,6 +36,11 @@ GO_file = 'data/GO.csv'
 node_embeddings_file = 'dip_node_embeddings_256.csv'
 feature_file = 'data/features/dip_features.csv'
 essential_protein_file = 'data/essential.txt'
+
+if not os.path.exists(node_embeddings_file):
+    raise FileNotFoundError(
+        f"File {node_embeddings_file} does not exist. \n✔ Please config and run NodeEmbeddings.py to generate Node Embeddings")
+# endif
 
 df1 = pd.read_csv(GO_file)
 df2 = pd.read_csv(node_embeddings_file)
