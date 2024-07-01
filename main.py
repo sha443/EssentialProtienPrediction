@@ -3,15 +3,10 @@ import os
 from Utility import Utility
 from NeuralNetwork import NeuralNetwork
 
-ppi_file_name = 'data/ppi/biogrid.txt'
 feature_file_name = 'data/features/biogrid_features.csv'
+# feature_file_name = 'data/features/dip_features.csv'
 
 # check if file exists
-if not os.path.exists(ppi_file_name):
-    raise FileNotFoundError(f"File {ppi_file_name} does not exist.")
-else:
-    print("Found PPI file: ", ppi_file_name)
-
 if not os.path.exists(feature_file_name):
     raise FileNotFoundError(
         f"File {feature_file_name} does not exist. \n✔ Please run FeatureBuilder.py first")
