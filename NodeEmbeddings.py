@@ -7,7 +7,7 @@ import csv
 G = nx.Graph()
 
 ppi_file = 'data/ppi/biogrid.txt'
-node_embeddings_file = "biogrid_node_embeddings_64.csv"
+node_embeddings_file = "biogrid_node_embeddings_256.csv"
 
 with open(ppi_file, 'r') as f:
     for line in f:
@@ -16,8 +16,8 @@ with open(ppi_file, 'r') as f:
 
 with joblib.parallel_backend('threading'):
     # Step 2: Generate walks and learn embeddings with Node2Vec
-    node2vec = Node2Vec(G, dimensions=64, walk_length=30,
-                        num_walks=10, workers=16)
+    node2vec = Node2Vec(G, dimensions=256, walk_length=80,
+                        num_walks=300, workers=16)
     model = node2vec.fit(window=10, min_count=3, batch_words=10)
 
  # Step 3: Get embeddings and protein names
