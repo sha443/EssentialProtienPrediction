@@ -6,8 +6,8 @@ import csv
 # Step 1: Load PPI data and create graph
 G = nx.Graph()
 
-ppi_file = 'data/ppi/biogrid.txt'
-node_embeddings_file = "biogrid_node_embeddings_256.csv"
+ppi_file = 'data/ppi/mips.txt'
+node_embeddings_file = "data/features/mips_node_embeddings_256.csv"
 
 with open(ppi_file, 'r') as f:
     for line in f:

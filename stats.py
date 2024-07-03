@@ -26,3 +26,6 @@ print(f"Unique essential proteins in DIP: {count}")
 
 count = count_essential_proteins(essential_file, 'data/ppi/biogrid.txt')
 print(f"Unique essential proteins in BioGrid: {count}")
+
+count = count_essential_proteins(essential_file, 'data/ppi/mips.txt')
+print(f"Unique essential proteins in MIPS: {count}")

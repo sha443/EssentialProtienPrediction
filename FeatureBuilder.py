@@ -33,8 +33,8 @@ def append_essentiality_column(csv_file, essential_file, output_file):
 # Load the CSV filess
 
 GO_file = 'data/GO.csv'
-node_embeddings_file = 'dip_node_embeddings_256.csv'
-feature_file = 'data/features/dip_features.csv'
+node_embeddings_file = 'data/features/mips_node_embeddings_256.csv'
+feature_file = 'data/features/mips_features.csv'
 essential_protein_file = 'data/essential.txt'
 
 if not os.path.exists(node_embeddings_file):
