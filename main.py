@@ -3,7 +3,7 @@ import os
 from Utility import Utility
 from NeuralNetwork import NeuralNetwork
 
-feature_file_name = 'data/features/biogrid_features.csv'
+# feature_file_name = 'data/features/biogrid_features.csv'
 feature_file_name = 'data/features/mips_features.csv'
 # feature_file_name = 'data/features/dip_features.csv'
 
