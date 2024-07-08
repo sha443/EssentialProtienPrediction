@@ -30,11 +30,11 @@ def append_essentiality_column(csv_file, essential_file, output_file):
     print(f"Updated file saved as {output_file}")
 
 
-# Load the CSV filess
+# Load the CSV files
 
 GO_file = 'data/GO.csv'
-node_embeddings_file = 'data/features/mips_node_embeddings_256.csv'
-feature_file = 'data/features/mips_features.csv'
+node_embeddings_file = 'data/features/dip_node_embeddings_256.csv'
+feature_file = 'data/features/dip_features.csv'
 essential_protein_file = 'data/essential.txt'
 
 if not os.path.exists(node_embeddings_file):
@@ -46,7 +46,7 @@ df1 = pd.read_csv(GO_file)
 df2 = pd.read_csv(node_embeddings_file)
 
 # Merge the DataFrames on the 'name' column, keeping only rows with matching 'name' values
-merged_df = pd.merge(df1, df2, on='Name', how='inner')
+merged_df = pd.merge(df1, df2, on='Name', how='right')
 merged_df = merged_df.fillna(0)
 
 # Save the merged DataFrame to a new CSV file

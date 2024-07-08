@@ -19,16 +19,18 @@ class Utility:
         y = data['Essentiality']
 
         # Apply SMOTE
+        print("Instances Before SMOTE: ", len(y))
         smote = SMOTE(random_state=1, sampling_strategy='minority',
                       n_jobs=-1, k_neighbors=5)
         X, y = smote.fit_resample(X, y)
+        print("Instances After SMOTE: ", len(y))
 
         # test train split
         X_seen, X_test, y_seen, y_test = train_test_split(
             X, y, test_size=0.2, random_state=42)
 
         X_train, X_val, y_train, y_val = train_test_split(
-            X_seen, y_seen, test_size=0.05, random_state=42)
+            X_seen, y_seen, test_size=0.1, random_state=7)
 
         # Normalize features
         scaler = StandardScaler()
