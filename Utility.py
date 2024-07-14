@@ -30,7 +30,7 @@ class Utility:
             X, y, test_size=0.2, random_state=42)
 
         X_train, X_val, y_train, y_val = train_test_split(
-            X_seen, y_seen, test_size=0.1, random_state=7)
+            X_seen, y_seen, test_size=0.1, random_state=42)
 
         # Normalize features
         scaler = StandardScaler()
