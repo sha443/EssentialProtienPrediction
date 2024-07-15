@@ -1,3 +1,5 @@
+from keras_sequential_ascii import keras2ascii
+from keras.utils import plot_model
 import os
 
 from Utility import Utility
@@ -13,7 +15,7 @@ if not os.path.exists(feature_file_name):
         f"File {feature_file_name} does not exist. \n✔ Please run FeatureBuilder.py first")
 else:
     print("Found feature file: ", feature_file_name)
-# end file checking
+# end file checkingpip install pydot
 
 
 # Load data
@@ -33,3 +35,9 @@ history = nn.train(X_train_normalized, y_train,
 loss, accuracy = nn.evaluate(X_test_normalized, y_test)
 
 util.plot_model_performance(nn.model, history, X_test_normalized, y_test)
+
+
+# plot_model(nn.model, to_file='NN_model.png', show_shapes=True,
+#            show_layer_activations=True, show_dtype=False, show_layer_names=True)
+
+keras2ascii(nn.model)
