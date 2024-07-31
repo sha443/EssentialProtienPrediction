@@ -40,4 +40,4 @@ util.plot_model_performance(nn.model, history, X_test_normalized, y_test)
 # plot_model(nn.model, to_file='NN_model.png', show_shapes=True,
 #            show_layer_activations=True, show_dtype=False, show_layer_names=True)
 
-keras2ascii(nn.model)
+# keras2ascii(nn.model)

@@ -26,7 +26,7 @@ class NeuralNetwork:
         # model.add(Dropout(0.5))
         model.add(Dense(1, activation='sigmoid'))
         model.compile(loss='binary_crossentropy',
-                      optimizer=RMSprop(), metrics=['accuracy'])
+                      optimizer=RMSprop(learning_rate=0.001), metrics=['accuracy'])
         return model
     # end def
 
