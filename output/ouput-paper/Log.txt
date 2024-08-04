@@ -1,3 +1,20 @@
+Sequence Features:
+BioGRID - Accuracy: 0.6940, Precision: 0.6484, Recall: 0.7804, F1-Score: 0.7083
+
+
+Centrality:
+BioGRID - Accuracy: 0.7134, Precision: 0.7467, Recall: 0.6707, F1-Score: 0.7066
+DIP - Accuracy: 0.6424, Precision: 0.7198, Recall: 0.4656, F1-Score: 0.5655
+MIPS - Accuracy: 0.6416, Precision: 0.6831, Recall: 0.4854, F1-Score: 0.5675
+
+
+Node Embeddings:
+BioGRID - Accuracy: 0.9015, Precision: 0.8790, Recall: 0.9376, F1-Score: 0.9074
+DIP - Accuracy: 0.8301, Precision: 0.8270, Recall: 0.8347, F1-Score: 0.8308
+MIPS - Accuracy: 0.8336, Precision: 0.8005, Recall: 0.8743, F1-Score: 0.8358
+
+
+Node Embeddings + GO:
 BioGRID - Accuracy: 0.9420, Precision: 0.9356, Recall: 0.9530, F1-Score: 0.9442
 DIP - Accuracy: 0.9128, Precision: 0.8759, Recall: 0.9616, F1-Score: 0.9168
 MIPS - Accuracy: 0.9263, Precision: 0.9155, Recall: 0.9342, F1-Score: 0.9247

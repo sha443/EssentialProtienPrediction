@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc, confusion_matrix, ConfusionMatrixDisplay, precision_recall_fscore_support
 
 # List of feature files
-feature_files = ['data/features/biogrid_features.csv',
-                 'data/features/dip_features.csv', 'data/features/mips_features.csv']
+feature_files = ['data/features/biogrid_centrality.csv',
+                 'data/features/dip_centrality.csv', 'data/features/mips_centrality.csv']
 
 # Mapping of file base names to formatted names
 formatted_names = {
@@ -49,7 +49,7 @@ for feature_file_name in feature_files:
 
     # Store results
     feature_name = os.path.basename(
-        feature_file_name).replace('_features.csv', '')
+        feature_file_name).replace('_centrality.csv', '')
     histories[feature_name] = history
     test_results[feature_name] = (X_test_normalized, y_test, nn.model)
 

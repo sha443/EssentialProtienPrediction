@@ -24,12 +24,12 @@ def count_essential_proteins(essential_file, ppi_file):
 # Example usage:
 essential_file = 'data/essential.txt'
 
-essential, count = count_essential_proteins(essential_file, 'data/ppi/dip.txt')
-print(f"Unique and essential proteins in DIP: {count, essential}")
-
 essential, count = count_essential_proteins(
     essential_file, 'data/ppi/biogrid.txt')
 print(f"Unique and essential proteins in BioGrid: {count, essential}")
+
+essential, count = count_essential_proteins(essential_file, 'data/ppi/dip.txt')
+print(f"Unique and essential proteins in DIP: {count, essential}")
 
 essential, count = count_essential_proteins(
     essential_file, 'data/ppi/mips.txt')
